@@ -1,0 +1,124 @@
+.header {
+   grid-column: 1 / -1;
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+
+   .link {
+      text-decoration: none;
+   }
+   
+   .logo {
+      display: flex;
+      align-items: center;
+      padding-left: 1.8rem;
+      gap: 1.4rem;
+      font-size: 1.7rem;
+      color: var(--text-primary);
+
+      &_svg {
+         height: 2.6rem;
+         width: 2.6rem;
+         fill: var(--color-primary);
+      }
+   }
+
+   .description {
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      @media (max-width: 528px), (max-height: 528px) {
+         display: none;
+      }
+   }
+
+   .divider {
+      height: 30%;
+      width: 1.5px;
+      background-color: var(--bg-divider);
+      border: none;
+      border-radius: 2rem;
+
+      @media (max-width: 528px), (max-height: 528px) {
+         display: none;
+      }
+   }
+
+   .links {
+      display: none;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 1.5rem;
+
+      @media (max-width: 528px), (max-height: 528px) {
+         display: flex;
+         gap: 1.5rem;
+      }
+
+      &__btn {
+         color: #474d57;
+         font-size: 2.2rem;
+         border-radius: 1rem;
+         display: flex;
+      }
+   }
+}
+
+.star_btn {
+   margin-left: auto;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   font-size: 1.4rem;
+   background-color: var(--bg-secondary);
+   color: var(--text-primary);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   padding: 1.2rem 1.5rem;
+   border-radius: 5rem;
+   transition: all 0.3s ease-out;
+   position: relative;
+   overflow: hidden;
+   text-decoration: none;
+
+   @media (max-width: 825px) {
+      display: none;
+   }
+
+   @media (max-width: 528px), (max-height: 528px) {
+      display: none;
+   }
+}
+
+.star_btn:hover {
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover_effect {
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 2rem;
+   height: 8rem;
+   background-color: var(--text-primary);
+   opacity: 0.1;
+   transform: translateX(3rem) rotate(12deg);
+   transition: all 0.5s ease-out;
+}
+
+.star_btn:hover .hover_effect {
+   transform: translateX(-21rem) rotate(12deg);
+}
+
+.icon_text {
+   display: flex;
+   align-items: center;
+}
+
+.icon_text svg {
+   font-size: 1.8rem;
+   margin-right: 0.5rem;
+}
+
+.label {
+   margin-left: 0.25rem;
+}
